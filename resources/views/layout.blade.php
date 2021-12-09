@@ -7,25 +7,26 @@
     <title>Priki</title>
 
     @livewireStyles
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{asset('css/navbar.css')}}" rel="stylesheet">
+    <link href="{{ asset('bootstrap/css/bootstrap.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/navbar.css')}}" rel="stylesheet">
 
-    <nav class="site-header sticky-top py-1 bg-dark text-light">
+    <nav class="site-header sticky-top bg-dark text-light">
         <div class="container d-flex flex-column flex-md-row justify-content-between">
             <a class="py-2" href="\">
                 Priki
             </a>
             <a class="py-2 d-none d-md-inline-block" href="role">Role</a>
             <a class="py-2 d-none d-md-inline-block" href="domain">Domain</a>
+            <a class="py-2 d-none d-md-inline-block" href="login">Connexion</a>
         </div>
     </nav>
 </head>
 <body class="antialiased">
-@yield('content')
-@livewireScripts
+<div class="ml-2">
+    @yield('content')
+    @livewireScripts
+</div>
 </body>
 </html>
