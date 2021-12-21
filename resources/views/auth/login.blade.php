@@ -1,10 +1,16 @@
+<?php
+use Carbon\Carbon;
+?>
+@extends('layout')
+
+@section('content')
 <x-guest-layout>
     <x-auth-card>
-        <x-slot name="logo">
+        <!-- S<x-slot name="logo">
             <a href="/">
                 <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
             </a>
-        </x-slot>
+        </x-slot> -->
 
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />
@@ -42,15 +48,16 @@
 
             <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
+                        {{ __('Create an account') }}
                     </a>
                 @endif
 
                 <x-button class="ml-3">
-                    {{ __('Log in') }}
+                    {{ __('auth.Log in') }}
                 </x-button>
             </div>
         </form>
     </x-auth-card>
 </x-guest-layout>
+@endsection

@@ -1,4 +1,4 @@
-a:link, a:hover, a:visited, a:active{
+a.layout:link, a.layout:hover, a.layout:visited, a.layout:active{
     color: white;
     text-align: left;
 }
