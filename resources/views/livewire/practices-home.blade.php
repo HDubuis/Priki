@@ -1,6 +1,6 @@
 <div>
     @isset($nbDays)
-        <p>Nouveau de <input wire:model="nbDays" name="last-updated-limit" type="number" min="0" max="365"
+        <p>Nouveau de <input wire:model="nbDays" name="last-updated-limit" type="number" min="1" max="365"
                              value="{{$nbDays}}"/> {{ $nbDays <= 1 ? 'jour' : 'jours' }}
         </p>
     @endisset
