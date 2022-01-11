@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PracticeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +27,8 @@ Route::get('/role', function () {
 Route::get('/domain', function () {
     return view('domain');
 });
+
+Route::get('/practice-{practice}', [PracticeController::class, 'index'])->name('practice');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

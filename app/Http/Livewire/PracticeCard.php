@@ -8,6 +8,7 @@ use App\Models\Practice;
 class PracticeCard extends Component
 {
     public Practice $practice;
+    public string $domainName;
     public function render()
     {
         return view('livewire.practice-card');

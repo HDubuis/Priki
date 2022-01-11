@@ -4,11 +4,9 @@
                              value="{{$nbDays}}"/> {{ $nbDays <= 1 ? 'jour' : 'jours' }}
         </p>
     @endisset
-    <div class="card-group">
-        @forelse ($practices as $practice)
-            <livewire:practice-card :practice="$practice"/>
-        @empty
-            <div class="ml-3"> Aucune pratique à afficher ici</div>
-        @endforelse
-    </div>
+    @forelse ($practices as $practice)
+        <livewire:practice-card :practice="$practice" :domainName="$practice->domain->name"/>
+    @empty
+        <div class="ml-3"> Aucune pratique à afficher ici</div>
+    @endforelse
 </div>
