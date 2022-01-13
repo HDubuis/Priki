@@ -25,6 +25,11 @@ class Practice extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function opinions()
+    {
+        return $this->hasMany(Opinion::class);
+    }
+
     static function publishedModifiedOnes($nbDays){
         return self::where('updated_at','>=',Carbon::now()->subDays((int)$nbDays)->toDateTimeString())
             ->whereHas('publicationState', function ($q){

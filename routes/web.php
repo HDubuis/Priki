@@ -18,8 +18,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[HomeController::class, 'index']);
 
-Route::get('/home/{nbDays}', [HomeController::class, 'index']);
-
 Route::get('/role', function () {
     return view('role');
 });
